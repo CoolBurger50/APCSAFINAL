@@ -6,7 +6,7 @@ local StateManager = require(ServerStorage.Modules.Managers.StateManager)
 
 local DashServer = {}
 
-function DashServer.main(player : Player, direction : string, animLength : number)
+function DashServer.main(player, direction, animLength)
 	local character = player.Character
 	
 	local stateObject = StateManager.new(character)

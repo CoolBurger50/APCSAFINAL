@@ -33,7 +33,7 @@ EquipServer.funcs = {
 
 	end,
 }
-function EquipServer.main(player : Player, msg)
+function EquipServer.main(player, msg)
 	local character = player.Character
 	local stateObject = StateManager.new(character)
 	EquipServer.funcs[msg](stateObject)

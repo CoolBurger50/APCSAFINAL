@@ -96,13 +96,13 @@ function StateManager:neutralize(currentState)
 
 end
 
-function StateManager:set(state : string, value : boolean, forcePrioritize : boolean)
+function StateManager:set(state, value, forcePrioritize)
 	local currentState = self.character:GetAttribute("state")
 
 	local function setState()
 		self.character:SetAttribute("state", state)
 
-		local humanoid : Humanoid = self.character:WaitForChild("Humanoid")
+		local humanoid = self.character:WaitForChild("Humanoid")
 
 		if self._paths[state].walkSpeed then
 			humanoid.WalkSpeed = self._paths[state].walkSpeed
